@@ -1,4 +1,5 @@
 const mario = document.querySelector('.mario');
+const pipe = document.querySelector('pipe');
 
 const jump = () => {
     mario.classList.add('jump');
@@ -8,7 +9,7 @@ const jump = () => {
     } , 500);
 }
 
-const loop = setInterval(() => {
+const loop = setInterval(() => { 
 
     console.log('loop')
 
@@ -17,7 +18,7 @@ const loop = setInterval(() => {
 
     console.log(marioPosition);
 
-    if (pipePosition < 120 && pipePosition > 0 && marioPosition < 80) {
+    if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
         pipe.style.animation = 'none';
         pipe.style.left = `${pipePosition}px`;
 
